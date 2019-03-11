@@ -1,18 +1,13 @@
 import React from 'react';
-import { withTracker } from 'meteor/react-meteor-data';
+import { Link } from 'react-router-dom';
 
-export default class Dashboard extends React.Component {
-  render() {
+import Header from './Header';
+
+export default () => {
     return (
       <div>
-        Dashboard component
+        <Header title="Test"/>
+        <Link to="contactlist">Contacts</Link>
       </div>
     );
-  }
 };
-
-// export default withTracker(() => {
-
-//   return {
-//   };
-// })(Dashboard);

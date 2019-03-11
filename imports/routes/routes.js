@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Login from '../ui/Login';
 import Signup from '../ui/Signup';
 import Dashboard from '../ui/Dashboard';
+import ContactList from '../ui/ContactList';
 import NotFound from '../ui/NotFound';
 
 function PrivateRoute({ component: Component, ...rest }) {
@@ -28,6 +29,7 @@ export const routes = (
       <Route exact path="/" component={Login}/>
       <Route path="/signup" component={Signup}/>
       <PrivateRoute path="/dashboard" component={Dashboard}/>
+      <PrivateRoute path="/contactlist" component={ContactList}/>
       <Route path="*" component={NotFound}/>
     </Switch>
   </Router>
